@@ -3,10 +3,6 @@ import numpy as np
 import multiprocessing as mp
 from dbconnection import insertParam
 
-
-last_hour   = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0, second=0, minute=0)
-lastts      = int(last_hour.timestamp())
-
 class GeneticStrategy(object):
     def __init__(self,function,num_generations,population_size,mutation_rate,tournament_size,bound,dimension,n_worker,database):
         
